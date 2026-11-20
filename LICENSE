@@ -1,0 +1,54 @@
+This repository contains two kinds of material, licensed differently.
+
+1. Website code
+---------------
+The HTML, CSS and JavaScript written for this website are licensed under the
+MIT License below.
+
+MIT License
+
+Copyright (c) 2024-2026 Palkhi Yatra
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+2. Content: all rights reserved
+-------------------------------
+Copyright (c) 2024-2026 Palkhi Yatra. All rights reserved.
+
+The MIT License above does NOT apply to:
+
+  - photographs and videos (everything under assets/images/),
+  - the Palkhi Yatra name and logo,
+  - the written text of the website pages.
+
+These may not be reused, reproduced or redistributed without written
+permission from Palkhi Yatra. Many photographs show pilgrims, volunteers and
+team members who agreed to appear on this website only.
+
+3. Third-party components
+-------------------------
+Libraries bundled under assets/ remain under their own licenses, including:
+
+  - Bootstrap (assets/bootstrap): MIT License
+  - Masonry (assets/masonry): MIT License
+  - imagesLoaded (assets/imagesloaded): MIT License
+  - Embla Carousel (assets/embla): MIT License
+  - Socicon icon font (assets/socicon) and Mobirise theme, icons and scripts
+    (assets/mobirise, assets/theme, assets/web and related folders):
+    subject to their respective authors' license terms.
