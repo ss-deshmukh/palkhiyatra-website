@@ -1,0 +1,163 @@
+/*
+ * Modern UI layer
+ * Visual refinements only (corners, shadows, hover states, navbar glass).
+ * No layout or structural changes. Loaded after mbr-additional.css on every page,
+ * so deleting the <link> to this file restores the previous look.
+ */
+
+:root {
+  --py-orange: #ff8100;
+  --py-peach: #ffdcc2;
+  --py-radius: 18px;
+  --py-radius-sm: 12px;
+  --py-shadow: 0 1px 2px rgba(40, 22, 5, 0.05), 0 8px 24px rgba(40, 22, 5, 0.08);
+  --py-shadow-hover: 0 2px 6px rgba(40, 22, 5, 0.08), 0 18px 40px rgba(40, 22, 5, 0.14);
+  --py-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--py-peach);
+  color: #1f1300;
+}
+
+/* ---------- Navbar: frosted glass ---------- */
+.cid-ul9GRxPbAQ .navbar-dropdown {
+  background: rgba(20, 14, 8, 0.5) !important;
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+.cid-ul9GRxPbAQ .navbar-nav .nav-item .nav-link {
+  border-radius: 999px !important;
+}
+.cid-ul9GRxPbAQ .navbar-nav .nav-item .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- Buttons: pill shape, gentle lift ---------- */
+.btn {
+  border-radius: 999px !important;
+  transition: transform 0.25s var(--py-ease), box-shadow 0.25s var(--py-ease),
+    background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn-secondary:hover,
+.btn-primary:hover,
+.btn-warning:hover {
+  box-shadow: 0 10px 24px rgba(255, 129, 0, 0.32);
+}
+.btn:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(255, 129, 0, 0.5);
+  outline-offset: 3px;
+}
+
+/* ---------- Hero ---------- */
+.cid-uldAjZq4cP .mbr-section-title {
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.35);
+}
+.cid-uldAjZq4cP .btn {
+  background-color: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+/* ---------- Text cards (impact numbers, journey steps, goals) ---------- */
+.features-without-image .item-wrapper {
+  border-radius: var(--py-radius) !important;
+  overflow: hidden;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+  box-shadow: var(--py-shadow);
+  transition: transform 0.3s var(--py-ease), box-shadow 0.3s var(--py-ease);
+}
+.features-without-image .item-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--py-shadow-hover);
+}
+
+/* ---------- Image cards (recent events, artifact gallery) ---------- */
+.features-image .item-wrapper {
+  border-radius: var(--py-radius) !important;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: var(--py-shadow);
+  transition: transform 0.3s var(--py-ease), box-shadow 0.3s var(--py-ease);
+}
+.features-image .item-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--py-shadow-hover);
+}
+.features-image .item-img {
+  overflow: hidden;
+}
+.features-image .item-img img {
+  transition: transform 0.6s var(--py-ease);
+}
+.features-image .item-wrapper:hover .item-img img {
+  transform: scale(1.04);
+}
+.features-image .item-content {
+  padding: 0 1.25rem 1.25rem;
+}
+
+/* ---------- Photos ---------- */
+.image-wrapper img,
+.embla__slide img,
+.video-wrapper,
+.mbr-embedded-video {
+  border-radius: var(--py-radius) !important;
+}
+.embla__slide .item-wrapper,
+.embla__slide .item-img {
+  border-radius: var(--py-radius) !important;
+  overflow: hidden;
+}
+.embla__button {
+  border-radius: 50% !important;
+  box-shadow: var(--py-shadow);
+}
+
+/* Gallery thumbnails */
+.mbr-gallery .gallery-image .item-wrapper {
+  border-radius: var(--py-radius-sm) !important;
+  overflow: hidden;
+}
+.mbr-gallery .gallery-image .item-wrapper img {
+  transition: transform 0.6s var(--py-ease);
+}
+.mbr-gallery .gallery-image .item-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* ---------- About page accordion ---------- */
+.card {
+  border-radius: var(--py-radius-sm) !important;
+  overflow: hidden;
+  box-shadow: var(--py-shadow);
+}
+
+/* ---------- Respect reduced-motion preferences ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .features-without-image .item-wrapper,
+  .features-image .item-wrapper,
+  .features-image .item-img img,
+  .mbr-gallery .gallery-image .item-wrapper img {
+    transition: none !important;
+  }
+  .btn:hover,
+  .features-without-image .item-wrapper:hover,
+  .features-image .item-wrapper:hover,
+  .features-image .item-wrapper:hover .item-img img,
+  .mbr-gallery .gallery-image .item-wrapper:hover img {
+    transform: none;
+  }
+}

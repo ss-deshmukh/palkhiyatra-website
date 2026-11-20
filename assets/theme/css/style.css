@@ -963,3 +963,33 @@ blockquote {
 	top: 0;
 	left: -2400px;
 }
+/* Self-hosted hero background video (Palkhi Yatra 2026 footage) */
+.py-has-bg-video {
+  position: relative;
+  overflow: hidden;
+}
+.py-has-bg-video .py-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+.py-has-bg-video > .container,
+.py-has-bg-video > .container-fluid {
+  position: relative;
+  z-index: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .py-has-bg-video .py-bg-video {
+    display: none;
+  }
+  .py-has-bg-video {
+    background-image: url("../../images/2026/py-2026-bg-poster.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
